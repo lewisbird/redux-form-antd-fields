@@ -4,7 +4,7 @@ import Input from "antd/lib/input";
 import createMapProps from '../Helpers/createMapProps';
 import createComponent from "../Helpers/createComponent";
 
-class InputField extends React.PureComponent {
+class Component extends React.PureComponent {
 
   render () {
 
@@ -30,10 +30,10 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
 })
 
-InputField =  createComponent(InputField, mapProps);
+Component =  createComponent(Component, mapProps);
 
-InputField.defaultProps = {
+Component.defaultProps = {
   style: {}
 }
 
-export default InputField;
+export default Component;

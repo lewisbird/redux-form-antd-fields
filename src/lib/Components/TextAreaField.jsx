@@ -6,7 +6,7 @@ import createComponent from "../Helpers/createComponent";
 
 const { TextArea } = Input;
 
-class TextAreaField extends React.PureComponent {
+class Component extends React.PureComponent {
 
   render () {
 
@@ -32,10 +32,10 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
 })
 
-TextAreaField =  createComponent(TextAreaField, mapProps);
+Component =  createComponent(Component, mapProps);
 
-TextAreaField.defaultProps = {
+Component.defaultProps = {
   style: {}
 }
 
-export default TextAreaField;
+export default Component;

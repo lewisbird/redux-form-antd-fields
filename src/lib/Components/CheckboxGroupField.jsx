@@ -6,7 +6,7 @@ import createComponent from "../Helpers/createComponent";
 
 const CheckboxGroup = Checkbox.Group;
 
-class CheckboxGroupField extends React.PureComponent {
+class Component extends React.PureComponent {
     
   render () {
 
@@ -34,10 +34,10 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
 })
 
-CheckboxGroupField =  createComponent(CheckboxGroupField, mapProps);
+Component =  createComponent(Component, mapProps);
 
-CheckboxGroupField.defaultProps = {
+Component.defaultProps = {
   style: {}
 }
 
-export default CheckboxGroupField;
+export default Component;

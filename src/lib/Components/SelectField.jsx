@@ -4,7 +4,7 @@ import Select from "antd/lib/select";
 import createMapProps from '../Helpers/createMapProps';
 import createComponent from "../Helpers/createComponent";
 
-class SelectField extends React.PureComponent {
+class Component extends React.PureComponent {
     
   initContainerRef = ref => this.container = ref
 
@@ -59,9 +59,9 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
 })
 
-SelectField =  createComponent(SelectField, mapProps);
+Component =  createComponent(Component, mapProps);
 
-SelectField.defaultProps = {
+Component.defaultProps = {
   style: {},
   options: [],
   valueKey: "value",
@@ -74,4 +74,4 @@ SelectField.defaultProps = {
   filterOption: (value, option) => option.props.children.toLowerCase().includes(value.toLowerCase())
 }
 
-export default SelectField;
+export default Component;
