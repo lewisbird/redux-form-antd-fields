@@ -12,7 +12,7 @@ class InputNumberField extends React.PureComponent {
 
     return (
 
-      <InputNumberField {...this.props} style={style} />
+      <InputNumber {...this.props} style={style} />
 
     );
   }
