@@ -4,7 +4,7 @@ import Switch from "antd/lib/switch";
 import createMapProps from '../Helpers/createMapProps';
 import createComponent from "../Helpers/createComponent";
 
-class Component extends React.PureComponent {
+class SwitchField extends React.PureComponent {
     
   render () {
 
@@ -32,10 +32,10 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
 })
 
-Component =  createComponent(Component, mapProps);
+SwitchField =  createComponent(SwitchField, mapProps);
 
-Component.defaultProps = {
+SwitchField.defaultProps = {
   style: {}
 }
 
-export default Component;
+export default SwitchField;

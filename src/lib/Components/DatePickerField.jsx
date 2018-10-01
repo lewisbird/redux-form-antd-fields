@@ -5,7 +5,7 @@ import DatePicker from "antd/lib/date-picker";
 import createMapProps from '../Helpers/createMapProps';
 import createComponent from "../Helpers/createComponent";
 
-class Component extends React.PureComponent {
+class DatePickerField extends React.PureComponent {
     
   render () {
 
@@ -50,12 +50,12 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
 })
 
-Component = createComponent(Component, mapProps);
+DatePickerField = createComponent(DatePickerField, mapProps);
 
-Component.defaultProps = {
+DatePickerField.defaultProps = {
   style: {},
   displayFormat: 'DD-MM-YYYY',
   valueFormat: 'YYYY-MM-DD'
 }
 
-export default Component;
+export default DatePickerField;

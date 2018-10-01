@@ -4,7 +4,7 @@ import Radio from "antd/lib/radio";
 import createMapProps from '../Helpers/createMapProps';
 import createComponent from "../Helpers/createComponent";
 
-class Component extends React.PureComponent {
+class RadioField extends React.PureComponent {
 
   render () {
 
@@ -63,9 +63,9 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
 })
 
-Component =  createComponent(Component, mapProps);
+RadioField =  createComponent(RadioField, mapProps);
 
-Component.defaultProps = {
+RadioField.defaultProps = {
   style: {},
   opions: [],
   valueKey: "value",
@@ -73,4 +73,4 @@ Component.defaultProps = {
   button: false
 }
 
-export default Component;
+export default RadioField;

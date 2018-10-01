@@ -4,7 +4,7 @@ import Checkbox from "antd/lib/checkbox";
 import createMapProps from '../Helpers/createMapProps';
 import createComponent from "../Helpers/createComponent";
 
-class Component extends React.PureComponent {
+class CheckboxField extends React.PureComponent {
     
   render () {
 
@@ -34,10 +34,10 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
 })
 
-Component =  createComponent(Component, mapProps);
+CheckboxField =  createComponent(CheckboxField, mapProps);
 
-Component.defaultProps = {
+CheckboxField.defaultProps = {
   style: {}
 }
 
-export default Component;
+export default CheckboxField;

@@ -4,7 +4,7 @@ import InputNumber from "antd/lib/input-number";
 import createMapProps from '../Helpers/createMapProps';
 import createComponent from "../Helpers/createComponent";
 
-class Component extends React.PureComponent {
+class InputNumberField extends React.PureComponent {
 
   render () {
 
@@ -12,7 +12,7 @@ class Component extends React.PureComponent {
 
     return (
 
-      <InputNumber {...this.props} style={style} />
+      <InputNumberField {...this.props} style={style} />
 
     );
   }
@@ -20,10 +20,10 @@ class Component extends React.PureComponent {
 
 const mapProps = createMapProps();
 
-Component = createComponent(Component, mapProps);
+InputNumberField = createComponent(InputNumberField, mapProps);
 
-Component.defaultProps = {
+InputNumberField.defaultProps = {
   style: {}
 }
 
-export default Component;
+export default InputNumberField;
