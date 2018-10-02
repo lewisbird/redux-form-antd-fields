@@ -25,7 +25,7 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
     value: _value
   } = mappedProps;
 
-  const onChange = (value, selectedOptions) => _onChange(selectedOptions === undefined ? null : selectedOptions);
+  const onChange = (value) => _onChange(value === undefined ? null : value);
 
   const value = (_value === null || _value === '') ? undefined : _value;
   
