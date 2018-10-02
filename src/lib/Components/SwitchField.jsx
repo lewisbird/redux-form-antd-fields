@@ -10,11 +10,9 @@ class SwitchField extends React.PureComponent {
 
     const style = _.merge({}, {}, this.props.style);
 
-    const { text, ...restProps } = this.props;
-
     return (
 
-      <Switch {...restProps} style={style} />
+      <Switch {...this.props} style={style} />
 
     );
   }
