@@ -7,6 +7,7 @@ import CheckboxField from './Components/CheckboxField';
 import CheckboxGroupField from './Components/CheckboxGroupField';
 import RadioField from './Components/RadioField';
 import SwitchField from './Components/SwitchField';
+import CascaderField from './Components/CascaderField';
 
 export {
   InputField,
@@ -17,5 +18,6 @@ export {
   CheckboxField,
   CheckboxGroupField,
   RadioField,
-  SwitchField
+  SwitchField,
+  CascaderField
 }
