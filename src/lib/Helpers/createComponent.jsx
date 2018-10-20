@@ -24,6 +24,8 @@ export default (AntdComponent, mapProps) => {
         colon,
         required,
         fieldWidth,
+        renderBefore,
+        renderAfter,
         ...restProps
       } = mapProps(
         this.props
@@ -48,7 +50,11 @@ export default (AntdComponent, mapProps) => {
           style={{ width: fieldWidth }}
         >
 
+          {renderBefore && renderBefore()}
+          
           <AntdComponent {...restProps} />
+          
+          {renderAfter && renderAfter()}
 
         </FormItem>
 
