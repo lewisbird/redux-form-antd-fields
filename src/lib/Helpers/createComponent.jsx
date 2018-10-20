@@ -56,20 +56,20 @@ export default (AntdComponent, mapProps) => {
           id={id}
         >
 
-          <Row gutter={8} {wrapperRow && ...wrapperRow}>
+          <Row gutter={8} {...wrapperRow}>
 
             {renderBefore && (
-              <Col {beforeCol && ...beforeCol}>
+              <Col {...beforeCol}>
                 {renderBefore()}
               </Col>
             )}
 
-            <Col span={24} {fieldCol && ...fieldCol}>
+            <Col span={24} {...fieldCol}>
               <AntdComponent {...restProps} />
             </Col>
           
             {renderAfter && (
-              <Col {afterCol && ...afterCol}>
+              <Col {...afterCol}>
                 {renderAfter()}
               </Col>
             )}
