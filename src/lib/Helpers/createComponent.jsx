@@ -82,6 +82,15 @@ export default (AntdComponent, mapProps) => {
     }
   }
 
+  FormComponent.defaultProps = {
+    renderBefore: null,
+    renderAfter: null,
+    wrapperRow: {},
+    fieldCol: {},
+    beforeCol: {},
+    afterCol: {},
+  }
+
   FormComponent.displayName = `Redux-Form-Antd-${AntdComponent.displayName}`;
 
   return FormComponent;
