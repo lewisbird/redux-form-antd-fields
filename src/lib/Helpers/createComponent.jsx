@@ -1,5 +1,7 @@
 import React from "react";
 import FormItem from "antd/lib/form/FormItem";
+import Row from "antd/lib/grid/row";
+import Col from "antd/lib/grid/col";
 
 export default (AntdComponent, mapProps) => {
 
@@ -23,8 +25,14 @@ export default (AntdComponent, mapProps) => {
         hasFeedback,
         colon,
         required,
+
         renderBefore,
         renderAfter,
+        wrapperRow,
+        fieldCol,
+        beforeCol,
+        afterCol,
+
         ...restProps
       } = mapProps(
         this.props
@@ -48,11 +56,25 @@ export default (AntdComponent, mapProps) => {
           id={id}
         >
 
-          {renderBefore && renderBefore()}
+          <Row gutter={8} {wrapperRow && ...wrapperRow}>
+
+            {renderBefore && (
+              <Col {beforeCol && ...beforeCol}>
+                {renderBefore()}
+              </Col>
+            )}
+
+            <Col span={24} {fieldCol && ...fieldCol}>
+              <AntdComponent {...restProps} />
+            </Col>
           
-          <AntdComponent {...restProps} />
-          
-          {renderAfter && renderAfter()}
+            {renderAfter && (
+              <Col {afterCol && ...afterCol}>
+                {renderAfter()}
+              </Col>
+            )}
+
+          </Row> 
 
         </FormItem>
 
