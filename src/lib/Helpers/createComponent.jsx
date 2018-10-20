@@ -23,6 +23,7 @@ export default (AntdComponent, mapProps) => {
         hasFeedback,
         colon,
         required,
+        fieldWidth,
         ...restProps
       } = mapProps(
         this.props
@@ -44,6 +45,7 @@ export default (AntdComponent, mapProps) => {
           colon={colon}
           required={required}
           id={id}
+          style={{ width: fieldWidth }}
         >
 
           <AntdComponent {...restProps} />
