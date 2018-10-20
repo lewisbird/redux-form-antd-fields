@@ -23,7 +23,6 @@ export default (AntdComponent, mapProps) => {
         hasFeedback,
         colon,
         required,
-        fieldWidth,
         renderBefore,
         renderAfter,
         ...restProps
@@ -47,7 +46,6 @@ export default (AntdComponent, mapProps) => {
           colon={colon}
           required={required}
           id={id}
-          style={{ width: fieldWidth }}
         >
 
           {renderBefore && renderBefore()}
