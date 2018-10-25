@@ -25,7 +25,7 @@ class RadioField extends React.PureComponent {
             const { [valueKey]: value, [labelKey]: label, ...rest } = option;
 
             return (
-              <Option {...rest} key={key} value={String(value)}>
+              <Option {...rest} key={key} value={Number.isInteger(value) ? value : String(value)}>
                 {label}
               </Option>
             )
@@ -33,7 +33,7 @@ class RadioField extends React.PureComponent {
           } else {
 
             return (
-              <Option key={key} value={String(option)}>
+              <Option key={key} value={Number.isInteger(option) ? option : String(option)}>
                 {option}
               </Option>
             )

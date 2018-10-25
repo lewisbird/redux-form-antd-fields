@@ -30,7 +30,7 @@ class SelectField extends React.PureComponent {
 
           {options.map(({ [valueKey]: value, [labelKey]: label, ...rest }, key) => (
 
-            <Select.Option {...rest} key={key} value={String(value)}>
+            <Select.Option {...rest} key={key} value={Number.isInteger(value) ? value : String(value)}>
               {label}
             </Select.Option>
 
