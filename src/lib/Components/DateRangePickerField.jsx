@@ -52,12 +52,12 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
 })
 
-DatePickerField = createComponent(DatePickerField, mapProps);
+DateRangePickerField = createComponent(DateRangePickerField, mapProps);
 
-DatePickerField.defaultProps = {
+DateRangePickerField.defaultProps = {
   style: {},
   displayFormat: 'DD-MM-YYYY',
   valueFormat: 'YYYY-MM-DD'
 }
 
-export default DatePickerField;
+export default DateRangePickerField;
