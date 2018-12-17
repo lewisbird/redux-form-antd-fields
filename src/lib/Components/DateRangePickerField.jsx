@@ -30,7 +30,7 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
     valueFormat
   } = mappedProps;
 
-  const onChange = (moments, dateString) => _onChange(moments ? `${moments[0].format(valueFormat)},${moments[1].format(valueFormat)}` : null);
+  const onChange = (moments, dateString) => _onChange(moments && moments.length > 0 ? `${moments[0].format(valueFormat)},${moments[1].format(valueFormat)}` : null);
 
   const onBlur = (event) => {
     const date = event.target.value;
