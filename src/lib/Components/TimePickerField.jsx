@@ -45,7 +45,7 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
   console.log('_value', _value)
 
-  const value = (_value === null || _value === '') ? undefined : moment(_value);
+  const value = (_value === null || _value === '') ? undefined : moment(_value, "HH:mm:ss");
 
   console.log('value', value)
 
