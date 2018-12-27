@@ -24,30 +24,24 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
     onChange: _onChange,
     onBlur: _onBlur,
     value: _value,
-    displayFormat,
-    valueFormat
+    displayFormat
   } = mappedProps;
 
-  const onChange = (date, timeString) => {
-    console.log('onChange', date, timeString)
-    console.log('formatted', valueFormat , date.format(valueFormat))
-    return _onChange(date ? date.format(valueFormat) : null);
+  const valueFormat = "HH:mm:ss";
+
+  const onChange = (moment, timeString) => {
+    return _onChange(moment ? moment.format(valueFormat) : null);
   }
 
   const onBlur = (event) => {
-    console.log('onBlur', event, event.target.value)
-    const date = event.target.value;
-    if (date) {
-      const value = (date === '' || date == 'Invalid date' ) ? null : moment(date, displayFormat).format("HH:mm:ss");
+    const time = event.target.value;
+    if (time) {
+      const value = (time === '' || time == 'Invalid date' ) ? null : moment(time, displayFormat).format(valueFormat);
       return _onBlur(value);
     }
   }
 
-  console.log('_value', _value)
-
-  const value = (_value === null || _value === '') ? undefined : moment(_value, "HH:mm:ss");
-
-  console.log('value', value)
+  const value = (_value === null || _value === '') ? undefined : moment(_value, valueFormat);
 
   return {
     ...mappedProps,
@@ -63,8 +57,7 @@ TimePickerField = createComponent(TimePickerField, mapProps);
 
 TimePickerField.defaultProps = {
   style: {},
-  displayFormat: 'HH:mm:ss',
-  valueFormat: 'HH:mm:ss'
+  displayFormat: 'HH:mm:ss'
 }
 
 export default TimePickerField;
