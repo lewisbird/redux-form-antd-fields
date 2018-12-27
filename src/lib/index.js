@@ -4,6 +4,7 @@ import TextAreaField from './Components/TextAreaField';
 import SelectField from './Components/SelectField';
 import DatePickerField from './Components/DatePickerField';
 import DateRangePickerField from './Components/DateRangePickerField';
+import TimePickerField from './Components/TimePickerField';
 import CheckboxField from './Components/CheckboxField';
 import CheckboxGroupField from './Components/CheckboxGroupField';
 import RadioField from './Components/RadioField';
@@ -17,6 +18,7 @@ export {
   SelectField,
   DatePickerField,
   DateRangePickerField,
+  TimePickerField,
   CheckboxField,
   CheckboxGroupField,
   RadioField,
