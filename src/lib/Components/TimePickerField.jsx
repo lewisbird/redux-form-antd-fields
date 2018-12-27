@@ -30,6 +30,7 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
   const onChange = (date, timeString) => {
     console.log('onChange', date, timeString)
+    console.log('formatted', valueFormat , date.format(valueFormat))
     return _onChange(date ? date.format(valueFormat) : null);
   }
 
