@@ -28,17 +28,25 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
     valueFormat
   } = mappedProps;
 
-  const onChange = (date, dateString) => _onChange(date ? date.format(valueFormat) : null);
+  const onChange = (date, timeString) => {
+    console.log('onChange', date, timeString)
+    return _onChange(date ? date.format(valueFormat) : null);
+  }
 
   const onBlur = (event) => {
+    console.log('onBlur', event, event.target.value)
     const date = event.target.value;
     if (date) {
-      const value = (date === '' || date == 'Invalid date' ) ? null : moment(date, displayFormat).format(valueFormat);
+      const value = (date === '' || date == 'Invalid date' ) ? null : moment(date, displayFormat).format("HH:mm:ss");
       return _onBlur(value);
     }
   }
 
+  console.log('_value', _value)
+
   const value = (_value === null || _value === '') ? undefined : moment(_value);
+
+  console.log('value', value)
 
   return {
     ...mappedProps,
