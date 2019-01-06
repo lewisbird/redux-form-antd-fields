@@ -55,7 +55,8 @@ DatePickerField = createComponent(DatePickerField, mapProps);
 DatePickerField.defaultProps = {
   style: {},
   displayFormat: 'DD-MM-YYYY',
-  valueFormat: 'YYYY-MM-DD'
+  valueFormat: 'YYYY-MM-DD',
+  placeholder: ''
 }
 
 export default DatePickerField;
