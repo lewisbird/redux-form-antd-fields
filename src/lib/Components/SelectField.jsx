@@ -30,7 +30,7 @@ class SelectField extends React.PureComponent {
 
           {options.map(({ [valueKey]: value, [labelKey]: label, ...rest }, key) => (
 
-            <Select.Option {...rest} key={key} data-label={label} value={Number.isInteger(value) ? value : String(value)}>
+            <Select.Option {...rest} key={key} label={label} value={Number.isInteger(value) ? value : String(value)}>
               {label}
             </Select.Option>
 
@@ -71,13 +71,7 @@ SelectField.defaultProps = {
   allowClear: true,
   hasFeedback: false,
   defaultActiveFirstOption: false,
-  filterOption: (value, option) => {
-    console.log(option, typeof option)
-    console.log(option.props, typeof option.props)
-    console.log(option.props.children, typeof option.props.children)
-    //option.props.textContent.toLowerCase().includes(value.toLowerCase())
-    return false;
-  }
+  filterOption: (value, option) => option.props.label.toLowerCase().includes(value.toLowerCase())
 }
 
 export default SelectField;
