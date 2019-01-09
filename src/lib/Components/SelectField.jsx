@@ -51,7 +51,7 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
     value: _value
   } = mappedProps;
 
-  const onChange = (value) => _onChange(value === undefined ? null : value);
+  const onChange = (value) => _onChange(value === undefined || value === 'null' || value === 'NULL' ? null : value);
 
   const value = (_value === null || _value === '') ? undefined : _value;
   
@@ -71,7 +71,7 @@ SelectField.defaultProps = {
   allowClear: true,
   hasFeedback: false,
   defaultActiveFirstOption: false,
-  filterOption: (value, option) => option.props.children.toLowerCase().includes(value.toLowerCase())
+  filterOption: (value, option) => option.props.children.textContent.toLowerCase().includes(value.toLowerCase())
 }
 
 export default SelectField;
