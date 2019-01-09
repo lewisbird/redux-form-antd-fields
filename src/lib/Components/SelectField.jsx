@@ -71,7 +71,13 @@ SelectField.defaultProps = {
   allowClear: true,
   hasFeedback: false,
   defaultActiveFirstOption: false,
-  filterOption: (value, option) => option.props.textContent.toLowerCase().includes(value.toLowerCase())
+  filterOption: (value, option) => {
+    console.log(option, typeof option)
+    console.log(option.props, typeof option.props)
+    console.log(option.props.children, typeof option.props.children)
+    //option.props.textContent.toLowerCase().includes(value.toLowerCase())
+    return false;
+  }
 }
 
 export default SelectField;
