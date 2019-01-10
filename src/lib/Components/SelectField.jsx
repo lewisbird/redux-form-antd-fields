@@ -70,7 +70,6 @@ SelectField.defaultProps = {
   showSearch: true,
   allowClear: true,
   hasFeedback: false,
-  defaultActiveFirstOption: false,
   filterOption: (value, option) => typeof option.props.children === 'string' ? option.props.children.toLowerCase().includes(value.toLowerCase()) : (typeof option.props.children.props.children === 'string' ? option.props.children.props.children.toLowerCase().includes(value.toLowerCase()) : false)
 }
 
