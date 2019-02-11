@@ -1,6 +1,6 @@
 {
   "name": "redux-form-antd-fields",
-  "version": "0.1.29",
+  "version": "0.1.30",
   "description": "A set of redux-form field bindings for antd data entry components",
   "author": "Lewis Bird",
   "homepage": "https://github.com/lewisbird/redux-form-antd-fields",
