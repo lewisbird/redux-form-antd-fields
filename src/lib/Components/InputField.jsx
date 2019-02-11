@@ -33,7 +33,8 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 InputField =  createComponent(InputField, mapProps);
 
 InputField.defaultProps = {
-  style: {}
+  style: {},
+  autoComplete: "off"
 }
 
 export default InputField;
