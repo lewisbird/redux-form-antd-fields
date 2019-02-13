@@ -26,16 +26,12 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
   const {
     onChange: _onChange,
-    value: _value,
-    checked: _checked,
+    value: checked
   } = mappedProps;
   
   const onChange = (event) => _onChange(event.target.value);
-
-  console.log('_value', _value)
-  console.log('_checked', _checked)
   
-  return { ...mappedProps, onChange };
+  return { ...mappedProps, onChange, checked };
 
 })
 
