@@ -25,10 +25,15 @@ class CheckboxField extends React.PureComponent {
 const mapProps = createMapProps((mappedProps, originalProps) => {
 
   const {
-    onChange: _onChange
+    onChange: _onChange,
+    value: _value,
+    checked: _checked,
   } = mappedProps;
   
   const onChange = (event) => _onChange(event.target.value);
+
+  console.log('_value', _value)
+  console.log('_checked', _checked)
   
   return { ...mappedProps, onChange };
 
