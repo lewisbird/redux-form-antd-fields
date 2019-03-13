@@ -65,7 +65,7 @@ export default (AntdComponent, mapProps) => {
             )}
 
             <Col span={24} {...fieldCol}>
-              <AntdComponent {...restProps} />
+              <AntdComponent {...restProps} ref={this.initComponentRef} />
             </Col>
           
             {renderAfter && (
