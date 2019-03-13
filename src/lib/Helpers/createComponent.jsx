@@ -43,7 +43,6 @@ export default (AntdComponent, mapProps) => {
       return (
 
         <FormItem
-          ref={(ref) => { this.componentRef = ref }}
           label={label}
           labelCol={labelCol}
           wrapperCol={wrapperCol}
