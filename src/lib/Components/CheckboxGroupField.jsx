@@ -25,16 +25,20 @@ class CheckboxGroupField extends React.PureComponent {
 const mapProps = createMapProps((mappedProps, originalProps) => {
 
   const {
+    onChange: _onChange,
     value: _value
   } = mappedProps;
-
-  console.log(_value)
   
+  const onChange = (event,value) => {
+    console.log(event, value);
+    return _onChange(event.target.checked)
+  }
+
   const value = !_value ? [] : _value;
   
-  console.log(value)
+  console.log(_value, '=>', value)
 
-  return { ...mappedProps, value };
+  return { ...mappedProps, onChange, value };
 
 })
 
