@@ -30,11 +30,11 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
   } = mappedProps;
   
   const onChange = (value) => {
-    console.log(value);
-    return _onChange(value)
+    console.log(value,b);
+    return _onChange(value,b)
   }
 
-  const value = !_value ? [] : _value;
+  const value = !_value ? [] : (Array.isArray(_value) ? _value : [_value]);
   
   console.log(_value, '=>', value)
 
