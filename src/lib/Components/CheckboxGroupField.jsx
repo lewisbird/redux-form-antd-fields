@@ -31,7 +31,7 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
   
   const onChange = (event,value) => {
     console.log(event, value);
-    return _onChange(event.target.checked)
+    return _onChange(event, value)
   }
 
   const value = !_value ? [] : _value;
