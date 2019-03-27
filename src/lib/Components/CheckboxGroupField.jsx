@@ -29,9 +29,9 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
     value: _value
   } = mappedProps;
   
-  const onChange = (event,value) => {
-    console.log(event, value);
-    return _onChange(event, value)
+  const onChange = (value) => {
+    console.log(value);
+    return _onChange(value)
   }
 
   const value = !_value ? [] : _value;
