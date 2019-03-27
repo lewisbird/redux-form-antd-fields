@@ -29,16 +29,16 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
     value: _value
   } = mappedProps;
   
-  const onChange = (value, b) => {
-    console.log(value,b);
-    return _onChange(value,b)
+  const onChange = (value) => {
+    console.log(value);
+    return _onChange(value)
   }
 
   const value = !_value ? [] : (Array.isArray(_value) ? _value : [_value]);
   
   console.log(_value, '=>', value)
 
-  return { ...mappedProps, onChange, value };
+  return { ...mappedProps, onChange, value, onFocus: () => null, onBlur: () => null, onClick: () => null };
 
 })
 
