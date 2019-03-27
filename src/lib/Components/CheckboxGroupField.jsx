@@ -27,9 +27,13 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
   const {
     value: _value
   } = mappedProps;
+
+  console.log(_value)
   
   const value = !_value ? [] : _value;
   
+  console.log(value)
+
   return { ...mappedProps, value };
 
 })
