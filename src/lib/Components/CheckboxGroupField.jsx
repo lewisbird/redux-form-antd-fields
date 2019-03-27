@@ -29,7 +29,7 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
     value: _value
   } = mappedProps;
   
-  const onChange = (value) => {
+  const onChange = (value, b) => {
     console.log(value,b);
     return _onChange(value,b)
   }
