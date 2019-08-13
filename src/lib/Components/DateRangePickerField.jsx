@@ -24,7 +24,6 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
   const {
     onChange: _onChange,
-    onBlur: _onBlur,
     value: _value,
     displayFormat,
     valueFormat
@@ -32,13 +31,7 @@ const mapProps = createMapProps((mappedProps, originalProps) => {
 
   const onChange = (moments, dateString) => _onChange(moments && moments.length > 0 ? `${moments[0].format(valueFormat)},${moments[1].format(valueFormat)}` : null);
 
-  const onBlur = (event) => {
-    const date = event.target.value;
-    if (date) {
-      const value = (date === '' || date == 'Invalid date' ) ? null : moment(date, displayFormat).format(valueFormat);
-      return _onBlur(value);
-    }
-  }
+  const onBlur = undefined
 
   const value = (_value === null || _value === '') ? undefined : [moment(_value.split(',')[0]), moment(_value.split(',')[1])];
 
